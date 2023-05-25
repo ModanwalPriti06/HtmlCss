@@ -1,0 +1,80 @@
+<html>
+	<head>
+	 <title>Side bar menu with sub menu</title>
+	 <style type="text/css">
+	 body
+	 {
+	 font-family:sans-serif;
+	 margin:20px 40px;
+	 }
+	 #mainbox
+	 {
+	 font-size:20px;
+	 cursor:pointer;
+	  transition:all .6s;
+	  
+	 }
+	 .sidemenu
+	 {
+	 position:fixed;
+	 top: 0px;
+	 left: 0px;
+	 height: 100%;
+	 width: 240px;
+	 background-color:#222;
+	 z-index:1;
+	 padding-top:80px;
+	 overflow-x:hidden;
+	 transition:all .5s;
+	 }
+	 .sidemenu a
+	 {
+	 padding:8px 8px 8px 64px;
+	 text-decoration:none;
+	 font-size:20px;
+	 color:#999;
+	 display:block;
+	 }
+	 
+	 .sidemenu a:hover
+	 {
+	 color:cyan;
+	 border-left-color:cyan;
+	 }
+	
+	 .sidemenu .closebtn
+	 {
+	 position:absolute;
+	 top:0px;
+	 right:25px;
+	 font-size:36px;
+	 margin-left:32px;
+	 }
+	 div a.p2
+	 {
+	line-height:40px;
+	border-bottom:1px solid rgba(255,255,255,0.1);
+	border-left:3px solid transparent;
+    }
+	</style>
+	</head>
+	<body>
+		  <div id="mainbox" onclick="openFunction()">&#9776;  Menu</div>
+	     <div id="menu" class="sidemenu">
+		<a href="#" class="p2">Home</a>
+		<a href="#" class="p2">History</a>
+		<a href="#" class="p2">Structure</a>
+		<a href="#" class="p2">Example</a>
+		<a href="#" class="p2">Aboutus</a>
+		<a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+		</div>
+		<script type="text/javascript">
+		function openFunction(){
+		document.getElementById("menu").style.width="240px";
+		}
+		function closeFunction(){
+		document.getElementById("menu").style.width="0px";
+		}
+		</script>
+	</body>
+</html>
